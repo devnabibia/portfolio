@@ -5,18 +5,26 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Software Development Intern",
+    title: "Frontend Intern",
     cardImage: "assets/images/experience-page/flipkart.jpg",
-    place: "Fintech",
-    time: "(Jan, 2021 - Dec, 2022)",
-    desp: "<li>Built E-Commerce Systems using reactjs, CSS, and Service-Oriented Architecture.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>mproved the performance of real-time business activity monitoring reports and reduced the report response time by more than 50%..</li>",
+    place: "Safaricom Company",
+    time: "(Jan, 2022 - Dec, 2022)",
+    desp: "<li>During the internship period i used to analyse user needs and software requirements to inform system design, conducts development tests, Monitors the perfomance of internal systems, writes reports regarding the state of software development.</li><li>Skills: Web Development, System manainance, Technical writing.</li>",
+  },
+  
+  {
+    title: "Technical Writer",
+    cardImage: "assets/images/experience-page/flipkart.jpg",
+    place: "Open Replay: Freelance",
+    time: "(Jan, 2020 - Present)",
+    desp: "<li>I am currently crafting high quality and informative articlesthat not only educate, but also engage and captvate our target audience. My extensive research, writing , and editing experience has enabled me to effectively communicate complex technical concepts in a simplified and easily understandable manner.</li> <li>Skills: Technical writing , web development</li>",
   },
   {
-    title: "Freelance Software Developer",
+    title: "Frontend engineer",
     cardImage: "assets/images/experience-page/gsoc.png",
-    place: "Nairobi, Kenya",
-    time: "(Jan 2023- present)",
-    desp: "<li>Built and maintained a working customer database, order system, and picking and packing system with MySQL, complete with error handling and data validation.</li><li>Created a working T-shirt sales website with Reactjs, HTML and CSS..</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+    place: "DevCareer-internship",
+    time: "(Jan 2021- Dec 2021)",
+    desp: "<li>During the course of my internship, I developed optimized, responsive websites and created technical documents, guides, and tutorials on various programming languages and frameworks.</li><li>Skills: Web Development, Technical writing.</li>",
   },
   {
     title: "Research Intern",
