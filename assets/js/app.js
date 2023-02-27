@@ -149,7 +149,7 @@ let footer = $(`
           </div>
         </div>
     </div>
-    <div style = "position:relative; left:120px; top:2px;">
+    
     <div class="contact-text">
     <h5>Contact Me!</h5>
     
@@ -159,7 +159,7 @@ let footer = $(`
         <h6>nangendodennis@gmail.com</h6>
         
     </div> 
-    </div>
+    
 
     
 
