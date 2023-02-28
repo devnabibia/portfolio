@@ -124,7 +124,7 @@ let footer = $(`
     
     <div class="container">
       <div class="row">
-        <
+        
 
 
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0 form-comtainer">
@@ -359,7 +359,7 @@ $(function () {
 //function to remove underline on hover
 
 $(document).ready(function () {
-  $("a.nav-link").hover(
+  $("a.nav-link").hover( 
     function () {
       $(this).removeClass("current-link");
     },
