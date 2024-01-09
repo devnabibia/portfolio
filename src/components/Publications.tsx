@@ -4,10 +4,12 @@ interface MediumArticle {
   title: string;
   link: string;
   guid: string;
+  id: string; // Assuming your Medium articles have an "id" property
 }
 
 const Publications: React.FC = () => {
   const [articles, setArticles] = useState<MediumArticle[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchMediumArticles = async () => {
@@ -17,13 +19,14 @@ const Publications: React.FC = () => {
         );
 
         if (!response.ok) {
-          throw new Error('Failed to fetch Medium articles');
+          throw new Error('Failed to retrieve Medium articles. Please check your Medium username or try again later.');
         }
 
         const data = await response.json();
-        setArticles(data.items);
-      } catch (error) {
+        setArticles(data.items.map((item: MediumArticle) => ({ ...item, id: item.guid })));
+      } catch (error: any) {
         console.error('Error fetching Medium articles:', error.message);
+        setError(error.message || 'An unknown error occurred.');
       }
     };
 
@@ -32,16 +35,20 @@ const Publications: React.FC = () => {
 
   return (
     <div>
-      <h1>My blog</h1>
-      <ul>
-        {articles.map((article) => (
-          <li key={article.guid}>
-            <a href={article.link} target="_blank" rel="noopener noreferrer">
-              {article.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <h1>Your Medium Articles</h1>
+      {error ? (
+        <p>Error: {error}</p>
+      ) : (
+        <ul>
+          {articles.map((article) => (
+            <li key={article.id}>
+              <a href={article.link} target="_blank" rel="noopener noreferrer">
+                {article.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
