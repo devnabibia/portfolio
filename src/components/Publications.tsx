@@ -16,7 +16,7 @@ const Publications: React.FC = () => {
   const variables = { page: 0 };
   const query = `
     query GetUserArticles($page: Int!) {
-        user(username: "ForJessicasake") {
+        user(username: "devnabibia") {
             publication {
                 posts(page: $page) {
                     title
@@ -30,7 +30,7 @@ const Publications: React.FC = () => {
   `;
 
   const fetchData = async (): Promise<ArticleType[]> => {
-    const data = await fetch("https://api.hashnode.com/", {
+    const data = await fetch("https://api.medium.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const Publications: React.FC = () => {
       <p className="lg:w-6/12 w-full md:w-11/12 text-sm text-justify pb-10 pt-5 leading-7">
         I write because I enjoy sharing what I've learned with others, and in
         some ways, expressing the learned concepts helps the knowledge stick. A
-        number of my Hashnode articles have helped early developers in the dev
+        number of my Medium articles have helped early developers in the dev
         community and this is what is most important to me.
       </p>
       <section className="flex place-items-center w-full">
@@ -88,7 +88,7 @@ const Publications: React.FC = () => {
               >
                 <figure className="border w-80">
                   <Link
-                    to={`https://forjessicasake.hashnode.dev/${articles.slug}`}
+                    to={`https://https://medium.com/@devnabibia/${articles.slug}`}
                     target="blank"
                   >
                     <img
