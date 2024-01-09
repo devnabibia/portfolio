@@ -30,7 +30,7 @@ const Publications: React.FC = () => {
   `;
 
   const fetchData = async (): Promise<ArticleType[]> => {
-    const data = await fetch("https://api.medium.com/", {
+    const data = await fetch("https://api.medium.com/v1", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
