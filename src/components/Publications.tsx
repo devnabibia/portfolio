@@ -1,63 +1,44 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+interface MediumArticle {
+  title: string;
+  link: string;
+  guid: string;
+}
 
 const Publications: React.FC = () => {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState<MediumArticle[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchMediumArticles = async () => {
       try {
-        const response = await fetch('https://api.medium.com/v1', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            query: `
-              query {
-                user(username: "devnabibia") {
-                  publication {
-                    posts {
-                      id
-                      title
-                      brief
-                      slug
-                      coverImage
-                    }
-                  }
-                }
-              }
-            `,
-          }),
-        });
+        const response = await fetch(
+          'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@devnabibia'
+        );
 
         if (!response.ok) {
-          throw new Error('Failed to fetch data from Medium API');
+          throw new Error('Failed to fetch Medium articles');
         }
 
         const data = await response.json();
-        const user = data.data.user;
-        
-        if (user && user.publication && user.publication.posts) {
-          setArticles(user.publication.posts);
-        }
+        setArticles(data.items);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching Medium articles:', error.message);
       }
     };
 
-    fetchData();
-  }, []); // Empty dependency array to run the effect only once when the component mounts
+    fetchMediumArticles();
+  }, []);
 
   return (
     <div>
-      <h1>Your Medium Articles</h1>
+      <h1>My blog</h1>
       <ul>
         {articles.map((article) => (
-          <li key={article.id}>
-            <h2>{article.title}</h2>
-            <p>{article.brief}</p>
-            <img src={article.coverImage} alt="Article Cover" />
-            {/* You can add more details or styling based on your needs */}
+          <li key={article.guid}>
+            <a href={article.link} target="_blank" rel="noopener noreferrer">
+              {article.title}
+            </a>
           </li>
         ))}
       </ul>
