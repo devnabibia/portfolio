@@ -90,6 +90,7 @@ const Publications: React.FC = () => {
                   <Link
                     to={`https://medium.com/@devnabibia/${articles.slug}`}
                     target="blank"
+                    rel="noopener noreferrer"
                   >
                     <img
                       src={articles.coverImage}
