@@ -88,7 +88,7 @@ const Publications: React.FC = () => {
               >
                 <figure className="border w-80">
                   <Link
-                    to={`https://https://medium.com/@devnabibia/${articles.slug}`}
+                    to={`https://medium.com/@devnabibia/${articles.slug}`}
                     target="blank"
                   >
                     <img
