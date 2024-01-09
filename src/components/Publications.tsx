@@ -1,119 +1,67 @@
-import { page } from "../atoms/Atoms";
-import { useQuery } from "react-query";
-import { useAtom } from "jotai";
-import stroke from "../assets/stroke.svg";
-import { Link } from "react-router-dom";
-
-type ArticleType = {
-  id: number;
-  coverImage: any;
-  slug: any;
-  title: string;
-  brief?: string;
-};
+import { useEffect, useState } from 'react';
 
 const Publications: React.FC = () => {
-  const variables = { page: 0 };
-  const query = `
-    query GetUserArticles($page: Int!) {
-        user(username: "devnabibia") {
-            publication {
-                posts(page: $page) {
-                    title
-                    brief
-                    slug
-                    coverImage
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://api.medium.com/v1', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: `
+              query {
+                user(username: "devnabibia") {
+                  publication {
+                    posts {
+                      id
+                      title
+                      brief
+                      slug
+                      coverImage
+                    }
+                  }
                 }
-            }
+              }
+            `,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch data from Medium API');
         }
-    }
-  `;
 
-  const fetchData = async (): Promise<ArticleType[]> => {
-    const data = await fetch("https://api.medium.com/v1", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query,
-        variables,
-      }),
-    });
+        const data = await response.json();
+        const user = data.data.user;
+        
+        if (user && user.publication && user.publication.posts) {
+          setArticles(user.publication.posts);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-    const result = await data.json();
-    const post = result.data.user.publication.posts;
-
-    return post; // Ensure to return the data from the function
-  };
-  const [pages] = useAtom(page);
-  const { data, status } = useQuery<ArticleType[]>(["page", pages], fetchData, {
-    keepPreviousData: true,
-  });
+    fetchData();
+  }, []); // Empty dependency array to run the effect only once when the component mounts
 
   return (
-    <section className="flex flex-col px-6 pb-20">
-      <section
-        className="flex justify-start items-center lg:w-5/12 w-72"
-        id="publications"
-      >
-        <h1 className="lg:text-2xl text-xl">
-          <span className="text-primary">#</span> My Blog
-        </h1>
-        <figure className="pl-4">
-          <img src={stroke} alt="line" className="lg:w-20 w-32" />
-        </figure>
-      </section>
-      <p className="lg:w-6/12 w-full md:w-11/12 text-sm text-justify pb-10 pt-5 leading-7">
-        I write because I enjoy sharing what I've learned with others, and in
-        some ways, expressing the learned concepts helps the knowledge stick. A
-        number of my Medium articles have helped early developers in the dev
-        community and this is what is most important to me.
-      </p>
-      <section className="flex place-items-center w-full">
-        {status === "error" && (
-          <p className="text-sm font-light text-center">
-            Error in fetching data
-          </p>
-        )}
-        {status === "loading" && (
-          <p className="text-sm font-light text-center">...</p>
-        )}
-        {status === "success" && (
-          <div className="grid md:grid-cols-2 grid-col-1 lg:grid-cols-3 lg:gap-5 gap-6 place-items-center w-full">
-            {data?.map((articles: ArticleType) => (
-              <article
-                key={articles.id}
-                className="items-center text-justify cursor-pointer hover:shadow-2xl shadow-lg"
-              >
-                <figure className="border w-80">
-                  <Link
-                    to={`https://medium.com/@devnabibia/${articles.slug}`}
-                    target="blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={articles.coverImage}
-                      alt="blog post cover"
-                      className=" w-80 h-36 object-fill"
-                    />
-                  </Link>
-                </figure>
-
-                <figcaption className="w-80">
-                  <h2 className="font-bold h-20 flex items-center lg:text-sm text-sm border-t-0 border px-2 py-2 text-justify">
-                    {articles.title}
-                  </h2>
-                  <p className="font-font h-32 text-xs border border-t-0 px-2 py-1 text-justify">
-                    {articles.brief}
-                  </p>
-                </figcaption>
-              </article>
-            ))}
-          </div>
-        )}
-      </section>
-    </section>
+    <div>
+      <h1>Your Medium Articles</h1>
+      <ul>
+        {articles.map((article) => (
+          <li key={article.id}>
+            <h2>{article.title}</h2>
+            <p>{article.brief}</p>
+            <img src={article.coverImage} alt="Article Cover" />
+            {/* You can add more details or styling based on your needs */}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
