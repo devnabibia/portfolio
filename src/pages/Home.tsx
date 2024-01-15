@@ -20,8 +20,8 @@ const Home:React.FC = () => {
     <Experience/>
     <Project/>
     <WritingExperience/>
-    <GuestWriting/>*
-    <Publications/>
+    <GuestWriting/>
+    {/*<Publications/>*/}
     <Contact/>
     <Footer/>
     </main>
