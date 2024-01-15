@@ -16,9 +16,9 @@ const GuestWriting: React.FC = () => {
   const articles = [
     {
       id: 2,
-      publication: "Open Replay",
-      link: "https://blog.openreplay.com/static-side-generation-vs-server-side-rendering",
-      title: "Static Site Generation Vs Server Side Rendering",
+      publication: "Docker",
+      link: "https://medium.com/@devnabibia/building-an-authentication-system-redis-and-mys-557576b6a7b5",
+      title: "Building an Authentication System Redis and MySQL",
       coverImage: "ssg.png",
       brief:
         "Today, where time is of the essence, the speed and visibility of your website can make or break your digital presence.",
@@ -26,19 +26,19 @@ const GuestWriting: React.FC = () => {
 
     {
       id: 1,
-      publication: "Turing",
-      link: "https://www.turing.com/kb/how-to-create-slider-in-js",
-      title: "How to Create a Slider in JavaScript?",
+      publication: "props in react",
+      link: "https://medium.com/@devnabibia/understanding-props-in-react-486febe26347",
+      title: "Understanding Props in React",
       coverImage: "/slider.png",
       brief:
         "Are you fed up with your website’s unorganized content? Want to add some interactive elements that'll engage your visitors and make them come back for more?",
     },
     {
       id: 6,
-      publication: "Pieces",
-      link: "https://code.pieces.app/blog/everything-you-need-to-know-to-choose-a-modern-javascript-framework",
+      publication: "Firebase",
+      link: "https://medium.com/@devnabibia/how-to-develop-a-serverless-web-app-with-react-and-firebase-d195780918c9",
       title:
-        "Everything You Need to Know to Choose a Modern JavaScript Framework",
+        "How to develop a Serverless web App with React and Firebase",
       coverImage: "/framework.png",
       brief:
         "When starting a dev career, you probably had no idea where to begin. But, once you found something interesting, you decided to learn it. When it comes to choosing a framework, it’s the same hurdle.",
@@ -55,19 +55,19 @@ const GuestWriting: React.FC = () => {
 
     {
       id: 3,
-      publication: "Turing",
-      link: "https://www.turing.com/kb/check-type-of-objects-variables-in-typescript",
-      title: "Typescript: How to Check Type of Objects & Variable",
+      publication: "Housify",
+      link: "https://medium.com/@devnabibia/housify-our-alx-portfolio-project-1fa6529c4339",
+      title: " -Our ALX Portfolio Project",
       coverImage: "/types.png",
       brief:
         "When working with variables or objects of the union type, you may want to narrow these types down to do something more specific...",
     },
     {
       id: 4,
-      publication: "Open Replay",
-      link: "https://blog.openreplay.com/you-dont-need-a-state-management-library--use-ustate-plus-context/",
+      publication: "Application programming interfaces",
+      link: "https://medium.com/@devnabibia/get-to-know-more-about-apis-8e8c14e23a2d/",
       title:
-        "You Don't Need A State Management Library -- Use UseState Plus Context",
+        "Get to know more about APIs",
       coverImage: "/state.png",
       brief:
         "Think of state as the current value of a variable in a React application that changes over time when an action or event occurs.",

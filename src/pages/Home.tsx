@@ -20,7 +20,7 @@ const Home:React.FC = () => {
     <Experience/>
     <Project/>
     <WritingExperience/>
-    <GuestWriting/>
+    <GuestWriting/>*
     <Publications/>
     <Contact/>
     <Footer/>
