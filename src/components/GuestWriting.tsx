@@ -45,9 +45,9 @@ const GuestWriting: React.FC = () => {
     },
     {
       id: 5,
-      publication: "Smashing Magazine",
+      publication: "My Journey in Tech",
       link: "https://www.smashingmagazine.com/2023/05/safest-way-hide-api-keys-react/",
-      title: "The Safest Way To Hide Your API Keys When Using React",
+      title: "From Hello World to a Backend Engineer!",
       coverImage: "/API.png",
       brief:
         "Want to make sure your API keys are safe and sound when working with React? I've got you covered!",
@@ -64,10 +64,10 @@ const GuestWriting: React.FC = () => {
     },
     {
       id: 4,
-      publication: "Application programming interfaces",
-      link: "https://medium.com/@devnabibia/get-to-know-more-about-apis-8e8c14e23a2d/",
+      publication: "Mastering Reusability in React:",
+      link: "https://medium.com/@devnabibia/mastering-reusability-in-react-a-guide-to-crafting-custom-hooks-for-stateful-logic-95df75894287",
       title:
-        "Get to know more about APIs",
+        " A Guide to Crafting Custom Hooks for Stateful Logic",
       coverImage: "/state.png",
       brief:
         "Think of state as the current value of a variable in a React application that changes over time when an action or event occurs.",
