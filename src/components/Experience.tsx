@@ -10,7 +10,7 @@ const Experience: React.FC = () => {
     <section className="flex flex-col px-6 cursor-pointer" id="experience">
       <section className="flex justify-start items-center lg:w-5/12 w-96 pb-10">
         <h1 className="lg:text-2xl md:text-xl text-lg">
-          <span className="text-primary">#</span>Software Engineer Experience
+          <span className="text-primary">#</span>Software Developer Experience
         </h1>
         <figure className="pl-4">
           <img src={stroke} alt="line" className="lg:w-28 w-16" />

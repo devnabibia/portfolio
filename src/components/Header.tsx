@@ -34,14 +34,16 @@ const Header: React.FC = () => {
         </h1>
         <p className="py-6 text-sm text-justify leading-7">
           I am <span className="text-primary"> Nabibia,</span> a detail-oriented{" "}
-          <span className="text-primary font-medium">Software Engineer</span>{" "}  who loves building quality applications using JavaScript and its
+          <span className="text-primary font-medium">Software Developer</span>{" "}  
+          who loves building quality applications using JavaScript, python and its
           frameworks. I started my journey in 2016, after attending my first
           tech event with <span className="text-primary"> Andela</span>,
           a community I joined while studying computer science at Rongo University
           <br />
           <br />
           Since graduation, I've put my skills to the test and gained hands-on
-          Fullstack  work experience by contributing to a couple of projects. I also frquently publish a variety of articles about
+          Fullstack  work experience by contributing to a couple of projects. 
+          I also frquently publish a variety of articles about
           my experiences as a{" "}
           <span className="text-primary font-medium"> Technical Writer</span> or
           on my medium blog and when I'm not doing any of these things, you'd

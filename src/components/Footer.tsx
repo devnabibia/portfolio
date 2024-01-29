@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         <div className="text-sm">
 
         <p className="py-3">nangendodennis@gmail.com</p>
-        <p>Software Engineer and Technical Writer</p>
+        <p>Software Developer and Technical Writer</p>
         </div>
       </nav>
 

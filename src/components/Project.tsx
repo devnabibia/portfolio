@@ -41,33 +41,33 @@ const Project: React.FC = () => {
       <section className="grid md:grid-cols-2 grid-col-1 lg:grid-cols-3 gap-6 lg:gap-5 place-items-center w-full text-xs">
         <Card
           image={Empower}
-          title="Empower Her Community Website"
+          title="Card_application"
           about="I learned the importance of teamwork while building and maintaining the community website as the engineering lead."
-          link="https://empower-her-community.vercel.app/"
+          link="https://card-application-lime.vercel.app/"
         />
         <Card
           image={goalTracker}
-          title="A Goal Tracker Application"
+          title="Real_estate_web_app"
           about="I mastered Firebase, TypeScript and integrated Paystack on this fullstack goal tracker application that allows you to track your goal progress."
-          link="https://progress-pal.vercel.app/"
+          link="https://houssify.vercel.app/"
         />
         <Card
           image="/morent.png"
           title="A Car Rental Application"
           about="Exploring Supabase auth and database, I developed this car rental application that provides an easy way to rent cars at low prices with comfortable facilities."
-          link="https://morent-rental.vercel.app/"
+          link="https://car-hire-app-chi.vercel.app/"
         />
         <Card
           image="/Ecommerce.png"
           title="A Grocery Store"
           about="I Mastered Zustand state management library by building this React application that allows you to order groceries easily on the website."
-          link="https://ecommerce.brimble.app/"
+          link="https://e-commerce-devnabibia.vercel.app/"
         />
       <Card
           image="/inno.png"
-          title="Innovotio's Website"
+          title="Gym_app"
           about="Mastering Tailwind, I translated this Figma design into frontend codes. A company website - Innovotio."
-          link="https://development-innovotio.vercel.app/"
+          link="https://gym-web-app-ten.vercel.app/"
         />
          {/* <Card
           image={Lamoore}
@@ -80,7 +80,7 @@ const Project: React.FC = () => {
           image={dockett}
           title="A Sticky Note Application"
           about="My first attempt with Firebase and React. I developed a sticky note application for anyone with a busy schedule!"
-          link="https://dockett.vercel.app/"
+          link="https://note-taking-web-app-phi.vercel.app/"
         />
         {/* <Card
           image={sunnyside}
