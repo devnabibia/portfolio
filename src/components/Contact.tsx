@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
           <h3 className="text-white text-base py-2">Message me here</h3>
           <a
             className="flex w-64 justify-between items-center"
-            href="mailto:jessicajoseph1807@gmail.com"
+            href="mailto:nangendodennis@gmail.com"
           >
             <img src={email} alt="email" className="h-5 w-5" />
             nangendodennis@gmail.com
