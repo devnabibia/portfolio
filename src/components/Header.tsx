@@ -35,8 +35,8 @@ const Header: React.FC = () => {
         <p className="py-6 text-sm text-justify leading-7">
           I am <span className="text-primary"> Nabibia,</span> a detail-oriented{" "}
           <span className="text-primary font-medium">Software Developer</span>{" "}  
-          who loves building quality applications using JavaScript, python and its
-          frameworks. I started my journey in 2016, after attending my first
+          Interested in Artificial Intelligence, Machine Learning, Deep Learning and Neural Networks. And also in web development
+          . I started my journey in 2016, after attending my first
           tech event with <span className="text-primary"> Andela</span>,
           a community I joined while studying computer science at Rongo University
           <br />
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           Fullstack  work experience by contributing to a couple of projects. 
           I also frquently publish a variety of articles about
           my experiences as a{" "}
-          <span className="text-primary font-medium"> Technical Writer</span> or
+          <span className="text-primary font-medium"> Technical Writer</span> 
           on my medium blog and when I'm not doing any of these things, you'd
           find me with my chess board.
         </p>
