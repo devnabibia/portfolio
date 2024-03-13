@@ -28,10 +28,8 @@ const Project: React.FC = () => {
         </figure>
       </section>
       <p className="lg:w-6/12 w-full md:w-11/12 text-sm text-justify pb-10 pt-5 leading-7">
-        <span className="text-primary"> Skill Development</span> is very
-        important to me, and I believe the best way to master a skill is by
-        building. I've always been a hands-on learner, so I love the challenge
-        of taking a concept and turning it into a working product.
+        <span className="text-primary"> Skill Development</span>  is the process of improving specific skills to be more efficient and effective when you perform a task. In the workplace, 
+        you'll find three main types of skill development: Upskilling: Improving your skills in your current role. Cross-skilling: Learn new skills for your current role.
         <br />
         <br />
         Over the course of time, while learning and mastering frontend tools and frameworks,
