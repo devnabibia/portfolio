@@ -77,10 +77,10 @@ const GuestWriting: React.FC = () => {
       publication: "Fetching dynamically structured data in a CMS with GraphQL:",
       link: "https://medium.com/@devnabibia/fetching-dynamically-structured-data-in-a-cms-with-graphql-0180d7c95bdd",
       title:
-        " GraphQL is the layer that provides data to the application, so it must serve the needs of the application.",
+        " GraphQL is the layer that provides data to the application.",
       coverImage: "/denp.png",
       brief:
-        "Think of state as the current value of a variable in a React application that changes over time when an action or event occurs.",
+        "GraphQL is the layer that provides data to the application, so it must serve the needs of the application.",
     },
   ];
 
