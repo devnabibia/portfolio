@@ -32,7 +32,7 @@ const Project: React.FC = () => {
         you'll find three main types of skill development: Upskilling: Improving your skills in your current role. Cross-skilling: Learn new skills for your current role.
         <br />
         <br />
-        Over the course of time, while learning and mastering frontend tools and frameworks,
+        Over the course of time, while learning and mastering frontend and backend tools and frameworks,
         I've developed a couple of projects to showcase my skills. Here are a
         few:
       </p>

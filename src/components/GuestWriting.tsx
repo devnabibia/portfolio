@@ -77,10 +77,10 @@ const GuestWriting: React.FC = () => {
       publication: "Fetching dynamically structured data in a CMS with GraphQL:",
       link: "https://medium.com/@devnabibia/fetching-dynamically-structured-data-in-a-cms-with-graphql-0180d7c95bdd",
       title:
-        " GraphQL is the layer that provides data to the application.",
+        " GraphQL- .",
       coverImage: "/denp.png",
       brief:
-        "GraphQL is the layer that provides data to the application, so it must serve the needs of the application.",
+        "is the layer that provides data to the application, so it must serve the needs of the application.",
     },
   ];
 
