@@ -80,7 +80,7 @@ const GuestWriting: React.FC = () => {
         " GraphQL- .",
       coverImage: "/denp.png",
       brief:
-        "is the layer that provides data to the application, so it must serve the needs of the application.",
+        "graphl is the layer that provides data to the application, so it must serve the needs of the application.",
     },
   ];
 
