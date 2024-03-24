@@ -43,7 +43,7 @@ const Header: React.FC = () => {
           <br />
           Since graduation, I've put my skills to the test and gained hands-on
           Fullstack  work experience by contributing to a couple of projects. 
-          I also frquently publish a variety of articles about
+          I also frequently publish a variety of articles about
           my experiences as a{" "}
           <span className="text-primary font-medium"> Technical Writer</span> 
           on my medium blog and when I'm not doing any of these things, you'd
